@@ -13,40 +13,68 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: Kiran Karra
+email: "kiran.karra@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+  This blog has some notes on signal processing, machine learning, copulas, and alpinism.
+twitter_username: blackbandres
+github_username: kkarrancsu
 minimal_mistakes_skin: default
 search: true
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York
 
 include:
   - _pages
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - _alpine
+  - _sigproc
+  - _ml
+  - _ideas
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Plugins (previously gems:)
 plugins:
@@ -58,34 +86,43 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "Kiran Karra"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Signal Processing, Machine Learning, Alpinism"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "Scholar"
+      icon: "a_svg google-scholar"
+      url: https://scholar.google.com/citations?user=XKO_fI8AAAAJ&hl=en&oi=ao
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/kkarrancsu"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/kiran-karra-0815ba70/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/blackbandres"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/mtnkrazy"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "Scholar"
+      icon: "ai ai-google-scholar-square ai"
+      url: https://scholar.google.com/citations?user=XKO_fI8AAAAJ&hl=en&oi=ao
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/kkarrancsu"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/kiran-karra-0815ba70/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/blackbandres"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://instagram.com/mtnkrazy"
 
 defaults:
   # _posts
@@ -106,10 +143,74 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _alpine
+  - scope:
+      path: "_alpine"
+      type: alpine
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  - scope:
+      path: "_sigproc"
+      type: sigproc
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  - scope:
+      path: "_copula"
+      type: copula
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  - scope:
+      path: "_ml"
+      type: ml
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  - scope:
+      path: "_ideas"
+      type: ideas
+    values:
+      layout: single
+      author_profile: false
+      share: true
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+collections:
+  alpine:
+    output: true
+    permalink: /:collection/:path/
+  sigproc:
+    output: true
+    permalink: /:collection/:path/
+  copula:
+    output: true
+    permalink: /:collection/:path/
+  ml:
+    output: true
+    permalink: /:collection/:path/
+  ideas:
+    output: true
+    permalink: /:collection/:path/
+
+head_scripts:
+    - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML
+
+
+# category_archive:
+#   type: liquid
+#   path: /categories/
+# tag_archive:
+#   type: liquid
+#   path: /tags/
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

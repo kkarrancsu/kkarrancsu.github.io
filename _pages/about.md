@@ -1,8 +1,18 @@
 ---
 permalink: /about/
 title: "About"
+layout: splash
+date: 2016-03-23T11:48:41-04:00
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/chimbo.jpg
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I am a Senior Machine Learning Researcher at the [Intelligent Systems Center](https://www.jhuapl.edu/isc) in the [Research and Exploratory Development Department](https://www.jhuapl.edu/OurWork/ResearchandExploratoryDevelopment) at [The Johns Hopkins University/Applied Physics Lab](https://www.jhuapl.edu).  Previously, I have worked at Virginia Tech's [Hume Center for National Security and Technology](https://www.hume.vt.edu), Axios Engineering (acquired by CACI), and Northrop Grumman all in the areas of software defined radio, signal processing, and machine learning.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I completed my PhD, studying statistical signal processing and [non-linear stochastic dependency modeling using copulas](https://vtechworks.lib.vt.edu/handle/10919/85110) under [Dr. Lamine Mili](https://ece.vt.edu/people/profile/mili).  Please see my [professional resume] for more details on my areas of expertise and prior work.
+
+For fun, I like to be in the mountains.  Check out my [alpine adventures](alpine.md) here.
+
+*"Climbing is a metamorphosis in our head of the impossible." - Reinhold Messner*

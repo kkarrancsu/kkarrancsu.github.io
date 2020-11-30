@@ -1,9 +1,13 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Signal Processing"
+    url: /sigproc/
+  - title: "Copula"
+    url: /copula/
+  - title: "Machine Learning"
+    url: /ml/
+  - title: "Ideas"
+    url: /ideas/
+  - title: "Alpine Activities"
+    url: /alpine/
   - title: "About"
     url: /about/
